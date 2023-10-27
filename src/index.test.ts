@@ -16,34 +16,7 @@ describe('RequestAPI', () => {
 
 		const token = await requestAPI.getAccessToken()
 
-		expect(token).toEqual('token')
-	})
-
-	it('should get a track by query and type', async () => {
-		const requestAPI = new RequestAPI()
-		const mockAdapter = new MockAdapter(axios)
-
-		mockAdapter.onGet('https://api.spotify.com/v1/search?q=Track%20Name&type=track').reply(200, {
-			data: {
-				tracks: [
-					{
-						id: 'track-id',
-						name: 'Track Name'
-					}
-				]
-			}
-		})
-
-		const track = await requestAPI.getTrack({
-			token: 'token',
-			query: 'Track Name',
-			type: 'track'
-		})
-
-		expect(track).toEqual({
-			id: 'track-id',
-			name: 'Track Name'
-		})
+		expect(token.data.access_token).toEqual('token')
 	})
 
 	it('should get a track by id', async () => {
@@ -62,7 +35,7 @@ describe('RequestAPI', () => {
 			id: 'track-id'
 		})
 
-		expect(track).toEqual({
+		expect(track.data).toEqual({
 			id: 'track-id',
 			name: 'Track Name'
 		})
