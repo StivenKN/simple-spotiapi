@@ -2,7 +2,6 @@
 	export let width = 30,
 		height = 30,
 		urlSong: string
-	console.log(urlSong)
 </script>
 
 <section>

@@ -39,7 +39,6 @@
 	const getInfoTrack = async (link: string) => {
 		try {
 			const response = await fetchRequest.getTrackById({ token, id: link })
-			console.log(response)
 			return response
 		} catch (error) {
 			console.error(error)
