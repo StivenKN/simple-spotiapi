@@ -41,6 +41,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@floating-ui/dom": "1.5.3"
+    "@floating-ui/dom": "1.5.3",
+    "axios": "^1.5.1",
+    "buffer": "^6.0.3"
   }
 }

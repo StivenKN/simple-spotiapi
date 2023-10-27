@@ -1,5 +1,4 @@
 <script lang="ts">
-	export const srr = false;
 	import '../app.postcss';
 
 	// Floating UI for Popups
