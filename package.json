@@ -43,6 +43,7 @@
   "dependencies": {
     "@floating-ui/dom": "1.5.3",
     "axios": "^1.5.1",
+    "axios-mock-adapter": "^1.22.0",
     "buffer": "^6.0.3"
   }
 }
